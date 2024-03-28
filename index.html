@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>To do List</title>
+</head>
+<body>
+    <header>
+        <h1 class="date"></h1>
+    </header>
+    <section>
+        <div class="table">
+            <input type="text" value="" class="input">
+            <button onclick="addTask()">Add Task</button>
+            <div class="list" id="mainList" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </section>
+    <div class="completed droppable-list" id="completedList" ondrop="drop(event)" ondragover="allowDrop(event)">Completed Tasks</div>
+    <div class="uncompleted droppable-list" id="uncompletedList" ondrop="drop(event)" ondragover="allowDrop(event)">Uncompleted Tasks</div>
+    <script src="./index.js"></script>
+</body>
+</html>
